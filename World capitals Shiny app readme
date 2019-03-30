@@ -1,0 +1,17 @@
+How to use the World capitals Shiny app, by TheCmos
+
+There is not really much to explain.
+- Using the slider at the top, select the lower population limit and the upper population limit.
+- The reactive functions will automatically refresh the chart, plotting the dots and city names at the right coordinates for all World capitals within that population range.
+- The dot sizes are proportional to the city population. But it is inportant to take into account that the dot sizes depend on the range selected, e.g., maximum size corresponds to maximum population of the raqnge selected.
+- Scroll down and you will see the number of capitals within the population range.
+- Scroll further down and you will see the full list of capitals.
+- Since the chart gets a little crowded, especially for lower population ranges, unselect the "labels" check button to just see the dots.
+- You can also unselect axis labels and chart title.
+
+Question for the user: What is the most populated World capital?
+
+Thank you and enjoy!
+
+TheCmos
+March 29, 2019
