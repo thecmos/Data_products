@@ -29,9 +29,10 @@ output$plot1 <- renderPlot({
   wc<-transform(wc,lat=as.numeric(lat),lng=as.numeric(lng))
   wccap<-filter(wc,capital=="primary")
   caps<-filter(wccap,population>minX & population<maxX)
-  xlab <- ifelse(input$show_xlab, "Longitude", "")
-  ylab <- ifelse(input$show_ylab, "Latitude", "")
-  main <- ifelse(input$show_title, "Latitude and Longitude of the World Capitals within the selected population range", "")
+  xlab <- "Longitude"
+  ylab <- "Latitude"
+  main <- "Latitude and Longitude of the World Capitals within the selected population range"
+  
   leg<- ifelse(input$show_legend, "right", "none")
   lab_sz<- ifelse(input$show_labels,4,0)
   
@@ -39,7 +40,7 @@ output$plot1 <- renderPlot({
   world<-fortify(spdf_world)
   
   g<-ggplot(world,aes(long,lat))
-  g<- g+geom_polygon(aes(group = group), colour = "grey50", fill = NA) +
+  g<- g+geom_polygon(aes(group = group), colour = "grey80", fill = NA) +
     coord_quickmap()
   g<-g+theme_bw()
   g<-g+geom_point(data=caps,mapping=aes(x=lng,y=lat,color=city,size=population,alpha=1/3))
