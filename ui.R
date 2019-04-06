@@ -1,7 +1,7 @@
 library(shiny)
 shinyUI(fluidPage(
   fluidRow(
-    column(12,offset=4,
+    column(4,offset=3,
            h4("Select lower and upper population limits")
     )
   ),
